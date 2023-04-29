@@ -9,6 +9,7 @@
 //Windows
 // #include <SDL.h>
 
+const double pi = acos(-1);
 const SDL_Color CYAN_COLOR = {0, 255, 255};
 const SDL_Color BLUE_COLOR = {0, 0, 255};
 const SDL_Color ORANGE_COLOR = {255, 165, 0};
@@ -45,6 +46,7 @@ class Painter
         SDL_Renderer* getRenderer() { return this->renderer; }
         void setAngle(double angle) { this->angle = angle; }
         double getAngle() { return angle; }
+        double rangle() const { return angle * pi / 180; }
         int getWidth() { return width; }
         int getHeight() { return height; }
         void clearWithBgColor(SDL_Color bgColor);

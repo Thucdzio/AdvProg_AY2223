@@ -50,7 +50,7 @@ public:
     
     void snakeMoveTo(Position position);
     void snakeLeave(Position position);
-
+    void setCherryPosition(Position p) { cherryPosition = p; }
     
     GameStatus getGameStatus();
 

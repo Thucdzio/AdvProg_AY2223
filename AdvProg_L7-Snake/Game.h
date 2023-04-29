@@ -38,6 +38,7 @@ public:
     bool isGameOver() const { return status == GAME_OVER; }
     void processUserInput(Direction direction);
     void nextStep();
+
     const std::vector< std::vector<CellType> >& getSquares() const { return squares; }
     CellType getCellType(Position p) const;
     void setGameStatus(GameStatus status);
@@ -47,7 +48,7 @@ public:
     Direction getCurrentDirection() const { return currentDirection; }
     int getScore() const { return score; }
     bool canChange(Direction current, Direction next) const;    
-    
+    void setGameStatus(GameStatus status) { this->status = status; }
     void snakeMoveTo(Position position);
     void snakeLeave(Position position);
     void setCherryPosition(Position p) { cherryPosition = p; }
